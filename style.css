@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+#container {
+  overflow: hidden;
+}
+.clear {
+  clear: both;
+}
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-third {
+  width: 33.33333%;
+}
+.col-half {
+  width: 50%;
+}
+.col-full {
+  width: 100%;
+}
+.text-center {
+  text-align: center !important;
+}
+.mt-8 {
+  margin-top: 8px !important;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+#header {
+  height: 46.5px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#nav > li {
+  float: left;
+  list-style: none;
+}
+#nav > li:hover > a {
+  background-color: #ccc;
+  color: #000;
+}
+#nav > li:hover #subnav a {
+  display: block;
+}
+#nav li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 46.5px;
+  display: inline-block;
+  padding: 0 24px;
+}
+#subnav li a {
+  color: #000;
+  display: none;
+}
+
+#subnav li:hover a {
+  background-color: #ccc;
+  color: #000;
+}
+#subnav li {
+  list-style: none;
+  background-color: #fff;
+}
+#subnav li a {
+  line-height: 40px;
+}
+
+.ti-angle-down {
+  font-size: 12px;
+}
+.search-btn i {
+  float: right;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 46.5px;
+  padding: 0 24px;
+}
+.search-btn i:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#slider {
+  background: url("storages/images/coffee.jpg") top center / cover no-repeat;
+  padding-top: 50%;
+  margin-top: 46.5px;
+  position: relative;
+}
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+}
+#slider .text-content h2,
+p {
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+#content {
+  height: 710px;
+}
+.content-section {
+  width: 800px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.section-subheading {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.about-text {
+  text-align: justify;
+  line-height: 1.4;
+}
+.list-coffee {
+  margin-top: 48px;
+}
+.name-coffee {
+  font-size: 15px;
+}
+.img-coffee {
+  width: 154px;
+  height: 170px;
+  border-radius: 4px;
+}
+
+.shop-section {
+  background-color: #000;
+  color: #fff;
+}
+.ticket-list {
+  background-color: #fff;
+  color: #000;
+  margin-top: 40px;
+  list-style: none;
+}
+.ticket-list li {
+  color: #757575;
+  font-size: 15px;
+  padding: 11px 16px;
+  border-bottom: 1px solid #ddd;
+}
+.sold-out {
+  background-color: #f44336;
+  color: #fff;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+.quantity {
+  background-color: #000;
+  color: #fff;
+  width: 34px;
+  float: right;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 16px;
+  margin-top: -3px;
+}
+.place-list {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+.place-img {
+  width: 100%;
+  display: block;
+}
+.place-img:hover {
+  opacity: 0.6;
+}
+.place-content {
+  background-color: #fff;
+  padding: 16px;
+  font-size: 15px;
+  color: #000;
+}
+.place-heading {
+  font-weight: 600;
+}
+.place-time {
+  color: #757575;
+  margin-top: 15px;
+}
+.place-desc {
+  line-height: 1.4;
+}
+.place-buy-btn {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 16px;
+}
+.place-buy-btn:hover {
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+  border: none;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.modal-main {
+  background-color: #fff;
+  width: 900px;
+  min-height: 200px;
+  position: relative;
+  max-width: calc(100%-32px);
+  animation: modalFadeIn ease 0.6s;
+}
+.modal-header {
+  background-color: rgb(130, 68, 68);
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  padding: 12px;
+}
+.modal-close:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: rgb(130, 68, 68);
+}
+.modal-body {
+  padding: 16px;
+}
+.modal-label {
+  display: block;
+  font-size: 16px;
+}
+.modal-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+  margin: 12px 0 24px 0;
+}
+#buy-items {
+  background-color: rgb(130, 68, 68);
+  border: none;
+  color: #fff;
+  width: 100%;
+  font-size: 15px;
+  padding: 18px;
+}
+#buy-items:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.modal-footer {
+  padding: 16px;
+  text-align: right;
+}
+.modal-help a {
+  color: rgb(138, 116, 116);
+}
+.modal.open {
+  display: flex;
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-content {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 48px;
+}
+.contact-info i {
+  width: 30px;
+  display: inline-block;
+  font-weight: bold;
+}
+.contact-form {
+  font-size: 15px;
+  margin-bottom: 48px;
+}
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.contact-form .form-submit-btn {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 6px 12px;
+  float: right;
+  cursor: pointer;
+}
+.contact-form .form-submit-btn:hover {
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+  border: none;
+}
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+  border-top: 3px dotted #ccc;
+}
+#footer .social-list {
+  font-size: 20px;
+}
+#footer .social-list a {
+  text-decoration: none;
+  color: #757575;
+}
+#footer .social-list a:hover {
+  color: #757575;
+  opacity: 0.5;
+}
+#footer .copy-right {
+  margin: 15px;
+  color: #757575;
+}
+#footer .copy-right a {
+  color: #757575;
+}
